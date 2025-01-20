@@ -1,11 +1,12 @@
-const wrapper = document.getElementById("wrapper");
+const title = document.querySelector(".title");
+const wrapper = document.querySelector("#wrapper");
+const link = document.querySelector(".link.bold");
+const inputNumber = document.querySelector('[type="number"]');
 
-const links = document.getElementsByClassName("link")
+const img = document.querySelector('img');
 
-const divs = document.getElementsByTagName("div");
+img.src = "https://wallpapers.com/images/hd/spiderman-background-oycfyb1ksermw921.jpg";
 
-const input = document.getElementsByName("Telefono")
+img.setAttribute("h1", "spiderman genial")
 
-console.log(links[0])
-console.log(divs)
-console.log(input)
+console.log(img.hasAttribute('alt'))
