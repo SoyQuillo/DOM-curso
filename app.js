@@ -1,15 +1,11 @@
-const wrapper = document.body.children[0]
-console.log(wrapper)
-const div = wrapper.children[1]
-console.log(div)
-const h1 = div.previousElementSibling
-console.log(h1)
+const wrapper = document.getElementById("wrapper");
 
+const links = document.getElementsByClassName("link")
 
+const divs = document.getElementsByTagName("div");
 
-const anchor = div.children[0];
+const input = document.getElementsByName("Telefono")
 
-anchor.addEventListener('click', function(){
-    document.documentElement.style.backgroundColor = "black";
-    document.documentElement.style.color = "red"
-});
+console.log(links[0])
+console.log(divs)
+console.log(input)
