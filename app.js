@@ -10,5 +10,6 @@ console.log(h1)
 const anchor = div.children[0];
 
 anchor.addEventListener('click', function(){
-h1.textContent = "Estoy siendo modificado desde el DOM"
+    document.documentElement.style.backgroundColor = "black";
+    document.documentElement.style.color = "red"
 });
