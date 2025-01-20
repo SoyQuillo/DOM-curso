@@ -8,3 +8,11 @@ const buttonHide = document.querySelector('[data-id="button-hide"]');
 input.addEventListener('change', function(e){
     changeUser.textContent = e.target.value;
 })
+
+function controladorEvento(){
+    const nombre = prompt("¿Cual es tu nombre")
+
+    alert(`Hola, Bienvenido ${nombre}`);
+}
+
+buttonShow.onclick = controladorEvento;
