@@ -5,14 +5,16 @@ const section = document.querySelector(".section");
 const buttonShow = document.querySelector('[data-id="button-show"]');
 const buttonHide = document.querySelector('[data-id="button-hide"]');
 
-input.addEventListener('change', function(e){
-    changeUser.textContent = e.target.value;
-})
 
-function controladorEvento(){
-    const nombre = prompt("¿Cual es tu nombre")
-
-    alert(`Hola, Bienvenido ${nombre}`);
+function showSection(){
+    wrapper.className = "show";
 }
 
-buttonShow.onclick = controladorEvento;
+function hideSection(){
+    wrapper.className = "hide";
+}
+
+buttonShow.addEventListener('click', showSection);
+
+buttonHide.addEventListener('click', hideSection);
+
