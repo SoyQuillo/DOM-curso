@@ -1,5 +1,14 @@
-const body = document.body.childNodes
+const wrapper = document.body.children[0]
+console.log(wrapper)
+const div = wrapper.children[1]
+console.log(div)
+const h1 = div.previousElementSibling
+console.log(h1)
 
-/*Para acceder a los hijos de body usamos childNodes*/
 
-console.log(body)
+
+const anchor = div.children[0];
+
+anchor.addEventListener('click', function(){
+h1.textContent = "Estoy siendo modificado desde el DOM"
+});
