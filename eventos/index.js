@@ -5,35 +5,18 @@ const section = document.querySelector(".section");
 const buttonShow = document.querySelector('[data-id="button-show"]');
 const buttonHide = document.querySelector('[data-id="button-hide"]');
 
+const elements = document.querySelectorAll("[data-id]");
 
-function showSection(e){
-    e.preventDefault()
-    wrapper.className = "show";
+console.log(elements);
 
-    this.textContent = "HOLAAAA"
+for(element of elements){
+    const currentElement = element.matches('[data-id = "button-show"]');
 
-    console.log(this)
+    if(currentElement){
+        console.log(element)
+        console.log(`Elemento ${element.nodeName} contiene el valor buttonShow en su atributo`);
+    }
+
 }
 
-function hideSection(e){
-    e.preventDefault()
-    wrapper.className = "hide";
-}
-
-buttonShow.addEventListener('click', showSection);
-
-buttonHide.addEventListener('click', hideSection);
-
-buttonShow.removeEventListener('click', showSection);
-
-input.addEventListener('change', function(e){
-    
-    changeUser.textContent = e.target.value;
-})
-
-wrapper.addEventListener('click', function(e){
-    e.target.style.backgroundColor = "hotpink";
-})
-
-
-
+console.log(input.closest('.wrapper'));
