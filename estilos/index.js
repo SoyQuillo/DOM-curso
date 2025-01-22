@@ -14,3 +14,6 @@ inputRange.addEventListener('change', function(e){
     title.style.setProperty('font-size', newRange+'px');
 })
 
+
+console.log(getComputedStyle(title).background);
+
