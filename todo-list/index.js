@@ -3,12 +3,23 @@ const form = document.querySelector(".form");
 const input = form.querySelector(".input");
 const listContainer = document.querySelector('.list-container');
 
+message();
+
  form.addEventListener('submit', handleSubmit);
 
  function message(){
    const h3 = document.createElement("h3");
+   h3.classList.add('task-message');
 
    h3.textContent = listContainer.firstElementChild ? 'Tareas por hacer' : 'No hay tareas aun';
+   const prevMeesage = document.querySelector('.task-message');
+   
+
+   if(prevMeesage){
+      prevMeesage.replaceWith(h3);
+
+      return;
+   }
 
    listContainer.before(h3);
  }
@@ -21,7 +32,7 @@ const listContainer = document.querySelector('.list-container');
     createTask(inputValue);
 
     form.reset();
-
+    message();
 
     
  }
@@ -30,8 +41,19 @@ const listContainer = document.querySelector('.list-container');
     const newTask = document.createElement("li");
     newTask.textContent = value;
 
-    listContainer.append(newTask);
+    listContainer.prepend(newTask);
+
+    addEvents(newTask)
+    
     
  }
 
- message();
+ 
+
+
+ function addEvents(element){
+   element.addEventListener('dblclick', function(){
+      element.remove();
+      message();
+   })
+ }
